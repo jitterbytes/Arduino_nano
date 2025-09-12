@@ -15,9 +15,11 @@ PINx -> Input Register (reads value when pin is input)
 
 So, for PB5 we will use DDRB and PORTB
 
+'''
 Now in normal Arduino coding  
 void setup() -> pinMode() sets the direction of the pin output  
 void loop() -> digitalWrite() toggles the pin high / low
+'''
 
 Now in register level coding 
 void setup() -> DDRB register (Need to set DDR5 as output) 
