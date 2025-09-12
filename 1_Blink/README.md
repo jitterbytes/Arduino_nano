@@ -38,3 +38,7 @@ Again same here 0x0B -> I/O address and 0x2B we will use -> Memory address
 Set and Clear PORTD2 | To set and clear an bit use OR and AND (or better XOR) but since its my first time lets first Set and then clear
 
 So we will create 2 pointers one will be in setup() to set the direction and other will be in loop()
+i wanted to use DDRD and PORTD as my variable but in Arduino IDE ig they are special Macros 
+so DDRD -> ddrd_ptr & PORTD -> portd_ptr
+
+Rest in the Code..
