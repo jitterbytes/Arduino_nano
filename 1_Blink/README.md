@@ -22,3 +22,5 @@ void loop() -> digitalWrite() toggles the pin high / low
 Now in register level coding 
 void setup() -> DDRB register  
 void loop() -> PORTB register
+
+![Alt text](./img/register.png)
