@@ -20,6 +20,15 @@ void setup() -> pinMode() sets the direction of the pin output
 void loop() -> digitalWrite() toggles the pin high / low
 
 Now in register level coding 
-void setup() -> DDRB register  
-void loop() -> PORTB register
+void setup() -> DDRB register (Need to set DDR5 as output) 
+void loop() -> PORTB register (Need to set & clear PORTB5)
 
+To set DDR5 as output we need to set that bit high (mentioned in the datasheet)
+To turn on PORTB5 -> 1 and to turn off PORTB5 -> 0
+
+To access these registers we need to use pointers
+use the datasheet to know on which address are these registers sitting 
+
+DDRB - Port D Direction Register 
+There will be 2 addresses 0x0A and 0x2A we will use 0x2A as it is Memeory address of the DDRB , 0x0A is I/O address
+D7 D6 D5 D4 D3 D2 D1 D0 ==> Set D5 as high | To set a bit we use OR operator 
