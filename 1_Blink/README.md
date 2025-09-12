@@ -23,4 +23,4 @@ Now in register level coding
 void setup() -> DDRB register  
 void loop() -> PORTB register
 
-![Alt text](1_Blink/img/register.png)
+![Alt text](Arduino_nano/1_Blink/img/register.png)
