@@ -23,4 +23,4 @@ Now in register level coding
 void setup() -> DDRB register  
 void loop() -> PORTB register
 
-![Alt text](./img/register.png)
+![Alt text](1_Blink/img/register.png)
