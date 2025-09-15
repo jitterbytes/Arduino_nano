@@ -59,3 +59,15 @@ So we have 6 leds D2 to D7 lets play with this make some kind of pattern. Usual 
 1. globally declare the pointer (coz if you just declare it in setup then in loop it wont recognize it -_- made a blunder last time lol)
 2. try to turn and turn off all the 6 leds at the same time
 3. Then lets try some patterns 
+
+----------------------------------------------------------------------------------------
+Making my own version of functions 
+Lets try it out creating our own functions
+pinMode -> mypinMode()
+digitalWrite -> mydigitalWrite()
+
+Lets see how to make these functions
+
+myPinMode() will have 2 args pin Number and seconds input or Output
+
+----------------------------------------------------------------------------------------
