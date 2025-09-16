@@ -70,4 +70,13 @@ Lets see how to make these functions
 
 myPinMode() will have 2 args pin Number and seconds input or Output
 
+-----------------------------------------------------------------------------------------
+Now lets make digitalWrite() Function 
+digitalWrite() -> mydigitalWrite()
+
+Lets see how it goes
+
+------------------------------------------------------------------------------------------
+Now lets get to digitalRead() Function 
+it seems like steps are similar
 ----------------------------------------------------------------------------------------
