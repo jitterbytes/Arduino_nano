@@ -1,4 +1,4 @@
-# 1_Blink
+# 1_GPIO
 Led is connected at D2 pin of the Arduino Nano Board.
 Very simple we used the digitalWrite() to turn on/off the led.
 
