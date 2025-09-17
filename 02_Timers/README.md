@@ -23,8 +23,8 @@ Clock -> Tick -> Events
     - with prescaler 64, tick every 4us. In 256 ticks -> overflow after 1024us (256 x 4us)
     *That means Timer0 naturally overflows about 1000 times per seconds at prescale 64*
 4. What Happens at Overflow or Compare Match?
-  - Overflow -> when counter reaches max (255 for 8 bit , 65535 for 16 bit) it rolls back to 0 and sets a flag.
-  - Compare Match ->If you load a value into OCRx, the timer will raise a flag (or toggle a pin) when counter == OCRx.  
+     - Overflow -> when counter reaches max (255 for 8 bit , 65535 for 16 bit) it rolls back to 0 and sets a flag.
+     - Compare Match ->If you load a value into OCRx, the timer will raise a flag (or toggle a pin) when counter == OCRx.  
 
 5. Interrupts -> lets see if we can do this later
 
