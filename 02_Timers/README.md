@@ -29,4 +29,15 @@ Clock -> Tick -> Events
 5. Interrupts -> lets see if we can do this later
 
 This is all the theory i got to know regarding the timers lets 
-Atmega328p has three timers
+
+Atmega328p has three timers/counters 
+Timer 0 | Timer 1 | Timer 2
+Now which timer to use ? Well all three of them have some differentiating factor which makes it easy for us (this is basically from my understanding dont bash me if i am wrong)
+- Timer 0 : 8 bit -> used for short delays  with simple PWM
+- Timer 1 : 16 bit -> used for long delays and very precise timings also PWM
+- Timer 2 : 8 bit -> used for short delays , simple PWM and also it has async mode something
+
+For now i will stick with Timer 0 to play around with timers.
+directly not creating mydelay() -- I will go through the concepts which i mentioned earlier
+
+#
