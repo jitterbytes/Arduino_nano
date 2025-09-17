@@ -79,6 +79,8 @@ Lets see how it goes
 ------------------------------------------------------------------------------------------
 Now lets get to digitalRead() Function 
 it seems like steps are similar
-
+in digital Read we are reading the pin. 
 
 ----------------------------------------------------------------------------------------
+Well with this GPIO ends.. onto next. 
+What i learnt: In AVR to manipulate the registers we have 3 addresses to deal with, Port Direction register | Port Data Register | Port Input Register. with pinmode to make a pin/bit of register as input make it 0 for output make it 1 , with digitalwrite first after the pin is output to make it high we make the bit 1, to make it low  we make the bit 0, with digitalread we simply read the bit return the pin level. Until now i have not gone it pull up and pull down we do that later.
