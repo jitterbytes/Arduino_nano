@@ -44,7 +44,7 @@ i wanted to use **DDRD** and **PORTD** as my variable but in Arduino IDE ig they
 _**Rest in the Code.. Check out `first.c`**_  
 
 ------
-##Led Patterns
+### Led Patterns  
 So now we are going to connect few more leds 
 for not making it complex for me we will choose the pins that are connected to the PORT D
 D2 to D7 are connected to PORTD2 to PORTD7
