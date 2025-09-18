@@ -2,18 +2,17 @@
 Let's begin then, Led is connected at D2 pin of the Arduino Nano Board.  
 Normally when can use `digitalWrite()` to turn ON | OFF.
 
-But I want to do it in Register Level instead of using the Arduino Libraries we will try & create our own _my functions version_ for the Nano.  
+But I want to do it in Register Level instead of using the Arduino Libraries we will try & create _my arduino functions_ for the Nano.  
 For this we need to look into the pinout diagram of the Nano   
 D2 is mapped to PD2 (which is Port D of the Atmega328p)  
 **our job is to toggle PD2 which is a bit of the Port D Register**.  
 
-### Now how to access it ??
-
+### Now how to access it ??  
 For GPIO Control, three main registers matter in AVR
 DDRx -> Data Direction Register (sets pin as input/output)
 PORTx -> Output Register (writes HIGH/LOW when pin is output)
 PINx -> Input Register (reads value when pin is input)
-
+<pre> ```c // Toggle LED on PD2 DDRD |= (1 << PD2); PORTD ^= (1 << PD2); ``` </pre>
 So, for PD2 we will use DDRB and PORTB
 
 Now in normal Arduino coding  
