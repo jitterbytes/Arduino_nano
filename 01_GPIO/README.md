@@ -8,11 +8,11 @@ D2 is mapped to PD2 (which is Port D of the Atmega328p)
 **our job is to toggle PD2 which is a bit of the Port D Register**.  
 
 ### Now how to access it ??  
-For GPIO Control, three main registers matter in AVR
-DDRx -> Data Direction Register (sets pin as input/output)
-PORTx -> Output Register (writes HIGH/LOW when pin is output)
-PINx -> Input Register (reads value when pin is input)
-<pre> ```c // Toggle LED on PD2 DDRD |= (1 << PD2); PORTD ^= (1 << PD2); ``` </pre>
+For GPIO Control, three main registers matter in AVR  
+`DDRx` -> Data Direction Register (sets pin as input/output)  
+`PORTx` -> Output Register (writes HIGH/LOW when pin is output)  
+`PINx` -> Input Register (reads value when pin is input)  
+
 So, for PD2 we will use DDRB and PORTB
 
 Now in normal Arduino coding  
