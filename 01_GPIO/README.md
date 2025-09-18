@@ -62,21 +62,21 @@ I connected 6 leds D2 to D7 lets play with this make some kind of pattern. Setup
 3. Then lets try some patterns 
 
 _**Rest in the Code.. Check out `second.c`**_ 
-----------------------------------------------------------------------------------------
-Making my own version of functions 
-Lets try it out creating our own functions
-pinMode -> mypinMode()
-digitalWrite -> mydigitalWrite()
 
-Lets see how to make these functions
+------
+### mypinMode()
+Making my own version of the arduino nano function   
+`pinMode` **->** `mypinMode()`  
 
-myPinMode() will have 2 args pin Number and seconds input or Output
+Lets see how to do it...
+_**Rest in the Code.. Check out `mypinMode.c`**_
 
 -----------------------------------------------------------------------------------------
-Now lets make digitalWrite() Function 
-digitalWrite() -> mydigitalWrite()
+### mydigitalWrite()
+`digitalWrite` **->** `mydigitalWrite()`  
 
-Lets see how it goes
+Again in the code like its mostly written in the header file T-T (like why i am ece)
+_**Check out `mypinMode.c`**_
 
 ------------------------------------------------------------------------------------------
 Now lets get to digitalRead() Function 
