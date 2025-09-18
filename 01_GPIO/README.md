@@ -31,11 +31,11 @@ use the datasheet to know on which address are these registers sitting on
 
 * **DDRD - Port D Direction Register**   
 There will be 2 addresses **0x0A** and **0x2A** we will use **0x2A** as it is **Memeory address of the DDRB** , _0x0A is I/O address_  
-> Set DDRD2 as high -> To set a bit we use OR operator 
+> **Set DDRD2 as high -> To set a bit we use OR operator** 
 
 * **PORTD - Port D Data Register**  
 Again same here _0x0B -> I/O address_ and **0x2B we will use -> Memory address**  
-> Set and Clear PORTD2 -> To set and clear an bit use OR and AND (or better XOR) but since its my first time lets first Set and then clear  
+> **Set and Clear PORTD2 -> To set and clear an bit use OR and AND (or better XOR) but since its my first time lets first Set and then clear**  
 
 So we will create 2 pointers one will be in `void setup()` to set the direction and other will be in `void loop()`
 i wanted to use **DDRD** and **PORTD** as my variable but in Arduino IDE ig they are special Macros 
