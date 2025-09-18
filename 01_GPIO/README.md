@@ -13,25 +13,25 @@ For GPIO Control, three main registers matter in AVR
 `PORTx` -> Output Register (writes HIGH/LOW when pin is output)  
 `PINx` -> Input Register (reads value when pin is input)  
 
-So, for PD2 we will use DDRB and PORTB
+So, for `PD2` we will use DDRB and PORTB
 
 Now in normal Arduino coding  
-void setup() -> pinMode() sets the direction of the pin output  
-void loop() -> digitalWrite() toggles the pin high / low
+`void setup()` -> `pinMode()` sets the direction of the pin output    
+`void loop()` -> `digitalWrite()` toggles the pin high / low  
 
-Now in register level coding 
-void setup() -> DDRD register (Need to set DDRD2 as output) 
-void loop() -> PORTD register (Need to set & clear PORTB5)
+Now in register level coding   
+`void setup()` -> `DDRD` register (Need to set `DDRD2` as output)   
+`void loop()` -> `PORTD` register (Need to set & clear `PORTB5`)  
 
-To set DDRD2 as output we need to set that bit high (mentioned in the datasheet)
-To turn on PORTD2 -> 1 and to turn off PORTD2 -> 0
+To set `DDRD2` as output we need to set that bit high _(mentioned in the datasheet)_  
+To turn ON `PORTD2` -> 1 and to turn OFF `PORTD2` -> 0  
 
-To access these registers we need to use pointers
-use the datasheet to know on which address are these registers sitting 
+To access these registers we need to use pointers  
+use the datasheet to know on which address are these registers sitting on   
 
-DDRD - Port D Direction Register 
-There will be 2 addresses 0x0A and 0x2A we will use 0x2A as it is Memeory address of the DDRB , 0x0A is I/O address
-Set DDRD2 as high | To set a bit we use OR operator 
+`DDRD` - Port D Direction Register -> access the full 8 bit of the Register 
+There will be 2 addresses **0x0A** and **0x2A** we will use **0x2A** as it is **Memeory address of the DDRB** , _0x0A is I/O address_
+> Set DDRD2 as high -> To set a bit we use OR operator 
 
 PORTD - Port D Data Register
 Again same here 0x0B -> I/O address and 0x2B we will use -> Memory address
