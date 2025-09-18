@@ -45,13 +45,14 @@ _**Rest in the Code.. Check out `first.c`**_
 
 ------
 ### Led Patterns  
-So now we are going to connect few more leds 
+So after i did the led blink i am going to connect _few more leds_   
 for not making it complex for me we will choose the pins that are connected to the PORT D
-D2 to D7 are connected to PORTD2 to PORTD7
+**D2 to D7 are connected to PORTD2 to PORTD7**
 
 **Intersting THing**
-- Now heres the interesting thing the atmega328p its a 8 bit microcontroller -> 8 bit wide registers so logically all the 8 bits should have been exposed as GPIO headers, but its not on the boards like Nano or UNO. Coz here some pins are internally reserved for other functions like PORTD0 and PORTD1 -> They are researved for UART Communication RX and TX.
-- Similarly you see this thing on Arduino UNO Board too, I feel only Arduino Mega does the justice with more GPIO Header Pins on the board which results in that the board can expose almost every bit of the internal registers to header.
+- Atmega328p its a **8 bit microcontroller** -> **8 bit wide registers** so logically all the 8 bits should have been _exposed as GPIO headers_, but its not on the boards like Nano or UNO. Coz here some pins are internally reserved for other functions
+  > **Like PORTD0 and PORTD1 -> They are researved for UART Communication RX and TX.**
+- Similarly you see this thing on Arduino UNO Board too, I feel only **Arduino Mega** does the justice with more GPIO Header Pins on the board so that it can expose almost **every bit of the internal registers to header**.
 
 _So if you have Mega with you then you can toggle the whole 8bits port without missing the bits_
 
