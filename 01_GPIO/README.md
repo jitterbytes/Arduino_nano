@@ -41,9 +41,8 @@ So we will create 2 pointers one will be in `void setup()` to set the direction 
 i wanted to use **DDRD** and **PORTD** as my variable but in Arduino IDE ig they are special Macros 
 > **DDRD -> ddrd_ptr & PORTD -> portd_ptr**
 
-Rest in the Code..
-
------------------------------------------------------------------------------------------
+_**Rest in the Code.. Check out `first.c`**_
+------
 Led Patterns 
 So now we are going to connect few more leds 
 for not making it complex for me we will choose the pins that are connected to the PORT D
