@@ -46,21 +46,22 @@ _**Rest in the Code.. Check out `first.c`**_
 ------
 ### Led Patterns  
 So after i did the led blink i am going to connect _few more leds_   
-for not making it complex for me we will choose the pins that are connected to the PORT D
+for not making it complex for me we will choose the pins that are connected to the PORT D  
 **D2 to D7 are connected to PORTD2 to PORTD7**
 
 **Intersting THing**
-- Atmega328p its a **8 bit microcontroller** -> **8 bit wide registers** so logically all the 8 bits should have been _exposed as GPIO headers_, but its not on the boards like Nano or UNO. Coz here some pins are internally reserved for other functions
+- Atmega328p its a **8 bit microcontroller** -> **8 bit wide registers** so logically all the 8 bits should have been _**exposed as GPIO headers**_, but its not on the boards like Nano or UNO. Coz here some pins are internally reserved for other functions
   > **Like PORTD0 and PORTD1 -> They are researved for UART Communication RX and TX.**
-- Similarly you see this thing on Arduino UNO Board too, I feel only **Arduino Mega** does the justice with more GPIO Header Pins on the board so that it can expose almost **every bit of the internal registers to header**.
+- Similarly you see this thing on Arduino UNO Board too, I feel only **Arduino Mega** does the justice with more GPIO Header Pins on the board so that it can expose almost **_every bit of the internal registers to header_**.
 
-_So if you have Mega with you then you can toggle the whole 8bits port without missing the bits_
+> **So if you have Mega with you then you can toggle the whole 8 bits port without missing the bits**
 
-So we have 6 leds D2 to D7 lets play with this make some kind of pattern. Usual set up steps
-1. globally declare the pointer (coz if you just declare it in setup then in loop it wont recognize it -_- made a blunder last time lol)
-2. try to turn and turn off all the 6 leds at the same time
+I connected 6 leds D2 to D7 lets play with this make some kind of pattern. Setup is same as the `first.c`  
+1. Globally declare the pointer (coz if you just declare it in setup then in loop it wont recognize it -_- i tried that lol)
+2. Try to turn and turn off all the 6 leds at the same time
 3. Then lets try some patterns 
 
+_**Rest in the Code.. Check out `second.c`**_ 
 ----------------------------------------------------------------------------------------
 Making my own version of functions 
 Lets try it out creating our own functions
