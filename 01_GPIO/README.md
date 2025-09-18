@@ -1,5 +1,5 @@
 # 1_GPIO
-Led is connected at D2 pin of the Arduino Nano Board.
+So Led is connected at D2 pin of the Arduino Nano Board.  
 Very simple we used the digitalWrite() to turn on/off the led.
 
 Lets do it in Register Level instead of using the Arduino Libraries we will try & create our own
