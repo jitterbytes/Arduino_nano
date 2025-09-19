@@ -40,10 +40,10 @@ Now which timer to use ? Well all three of them have some differentiating factor
 For now i will stick with Timer 0 to start with timers.  
 directly not creating mydelay() -- I will go through the concepts which i mentioned earlier then recreate this function  
 **I got more info about indiviaul Timer and its Register lets see one by one**  
-> In the Register there is something like A,B,C well they do have meaning
-> A is for Compare and output stuffs
-> B is for Prescaler and some mode bits
-> C is for extra bits (used for Timer 1 as it is 16 bits)
+> In the Register there is something like A,B,C well they do have meaning  
+> A is for Compare and output stuffs  
+> B is for Prescaler and some mode bits  
+> C is for extra bits (used for Timer 1 as it is 16 bits)  
 ## Timer 0 (8 bit General Purpose)
 > Used for: Simple delays, millis(), micros(), PWM(fast/phase connect)
 * **TCCR0A** -> TCCR means Timer/Counter Control Register, 0 is for Timer 0 and A i
