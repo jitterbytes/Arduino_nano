@@ -1,4 +1,4 @@
-# 01_GPIO – Register Level on Arduino Nano  
+# 01_GPIO   
 
 LED is connected at **D2** pin of the Arduino Nano board.  
 Normally, we can use `digitalWrite()` to turn it ON/OFF.  
