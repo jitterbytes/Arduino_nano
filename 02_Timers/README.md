@@ -32,12 +32,18 @@ This is all the theory i got to know regarding the timers lets
 
 Atmega328p has three timers/counters 
 Timer 0 | Timer 1 | Timer 2
-Now which timer to use ? Well all three of them have some differentiating factor which makes it easy for us (this is basically from my understanding dont bash me if i am wrong)
+Now which timer to use ? Well all three of them have some differentiating factor which makes it easy for us (this is basically from my understanding)
 - Timer 0 : 8 bit -> used for short delays  with simple PWM
 - Timer 1 : 16 bit -> used for long delays and very precise timings also PWM
 - Timer 2 : 8 bit -> used for short delays , simple PWM and also it has async mode something
 
-For now i will stick with Timer 0 to play around with timers.
-directly not creating mydelay() -- I will go through the concepts which i mentioned earlier
-
-#
+For now i will stick with Timer 0 to start with timers.  
+directly not creating mydelay() -- I will go through the concepts which i mentioned earlier then recreate this function  
+**I got more info about indiviaul Timer and its Register lets see one by one**  
+> In the Register there is something like A,B,C well they do have meaning
+> A is for Compare and output stuffs
+> B is for Prescaler and some mode bits
+> C is for extra bits (used for Timer 1 as it is 16 bits)
+## Timer 0 (8 bit General Purpose)
+> Used for: Simple delays, millis(), micros(), PWM(fast/phase connect)
+* **TCCR0A** -> TCCR means Timer/Counter Control Register, 0 is for Timer 0 and A i
