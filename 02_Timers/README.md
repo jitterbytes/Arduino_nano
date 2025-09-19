@@ -2,8 +2,8 @@
 Now lets get into timers..wow the datasheet was overwhelming i got lost where to look at i want to replicate delay() -> mydelay()
 but for that as much as i know uC uses timers behind the scenes
 
-Damn i got a lot info of how the timers works so its basically 
-Clock -> Tick -> Events 
+First i wanted to know how the timers actually works so its basically 
+Clock -> Tick -> Events  [Like this is the flow]
 1. Microcontroller Clock
    Atmega328p runs at 16MHz (Nano's Crystal) -> Means 16 Million cycles per second
    So Each cycle happen at 62.5ns i.e ( 1 / 16M )
