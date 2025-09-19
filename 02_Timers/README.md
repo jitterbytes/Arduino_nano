@@ -3,7 +3,7 @@ Now lets get into timers..wow the datasheet was overwhelming i got lost where to
 but for that as much as i know uC uses timers behind the scenes
 
 First i wanted to know how the timers actually works so its basically   
-Clock -> Tick -> Events  [Like this is the flow]  
+**Clock -> Tick -> Events  [Like this is the flow]**  
 1. **Microcontroller Clock**  
    Atmega328p runs at 16MHz (Nano's Crystal) -> Means 16 Million cycles per second  
    So Each cycle happen at 62.5ns i.e ( 1 / 16M )  
@@ -44,6 +44,7 @@ directly not creating mydelay() -- I will go through the concepts which i mentio
 > A is for Compare and output stuffs  
 > B is for Prescaler and some mode bits  
 > C is for extra bits (used for Timer 1 as it is 16 bits)  
+
 ## Timer 0 (8 bit General Purpose)
 > Used for: Simple delays, millis(), micros(), PWM(fast/phase connect)  
 * **TCCR0A (Timer Counter Control Register A)**  
@@ -63,4 +64,14 @@ directly not creating mydelay() -- I will go through the concepts which i mentio
   - Use Case: When you want timer interrupt instead of polling
 * **TIFR0 (Timer Interrupt Flag Register)**  
   - Purpose: Flag bits (Check if event happened)     
-  - Use Case: Use polling mode to see if overflow compare occcured      
+  - Use Case: Use polling mode to see if overflow compare occcured
+
+## Let's now first do Timer 0 overflow blink 
+Plan 
+1. Timer0 is 8 bit -> it counts 0 to 255.
+2. When it overflows it goes from 255 to 0, overflow flag is set
+3. We will poll this flag -> each overflow = like a know time delay.
+4. Combine overflows until we reach 0.5s or 1s then toggle led
+
+Now what registers we need for this 
+    
