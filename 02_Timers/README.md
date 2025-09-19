@@ -45,7 +45,5 @@ directly not creating mydelay() -- I will go through the concepts which i mentio
 > B is for Prescaler and some mode bits  
 > C is for extra bits (used for Timer 1 as it is 16 bits)  
 ## Timer 0 (8 bit General Purpose)
-> Used for: Simple delays, millis(), micros(), PWM(fast/phase connect)
-| Register | Name | Purpose | Use |
-| -------- | ---- | --------| --- |
-* **TCCR0A** | Timer/Counter Control Register, 0 is for Timer 0 | 
+> Used for: Simple delays, millis(), micros(), PWM(fast/phase connect)  
+* TCCR0A (Timer Counter Control Register A)
