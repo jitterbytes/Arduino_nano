@@ -46,4 +46,6 @@ directly not creating mydelay() -- I will go through the concepts which i mentio
 > C is for extra bits (used for Timer 1 as it is 16 bits)  
 ## Timer 0 (8 bit General Purpose)
 > Used for: Simple delays, millis(), micros(), PWM(fast/phase connect)
-* **TCCR0A** -> TCCR means Timer/Counter Control Register, 0 is for Timer 0 and A i
+| Register | Name | Purpose | Use |
+| -------- | ---- | --------| --- |
+* **TCCR0A** | Timer/Counter Control Register, 0 is for Timer 0 | 
