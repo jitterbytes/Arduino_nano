@@ -9,18 +9,18 @@ From the pinout diagram:
 - **D2 → PD2** (Port D of ATmega328p)  
 - Our job: **toggle PD2, which is a bit of the Port D register**  
 
----
 
-## 📑 Navigation  
+
+### 📑 Navigation  
 
 - [How to access it?](#-how-to-access-it)  
 - [LED Patterns](#-led-patterns)  
 - [Custom Arduino-like Functions](#-custom-arduino-like-functions)  
 - [Learnings](#-learnings)  
 
----
 
-## 🔹 How to access it?  
+
+### 🔹 How to access it?  
 
 For GPIO control in AVR, three main registers matter:  
 - `DDRx` → Data Direction Register (sets pin as input/output)  
@@ -47,14 +47,14 @@ Since `DDRD` and `PORTD` are macros in Arduino IDE, I used:
 
 👉 Check out `first.c` for the implementation.  
 
----
 
-## 🔹 LED Patterns  
+
+### 🔹 LED Patterns  
 
 Next, I connected multiple LEDs. To keep it simple, I chose pins on **PORTD**:  
 - **D2 → D7** → mapped to **PORTD2 → PORTD7**  
 
-### Interesting thing  
+#### Interesting thing  
 - ATmega328p is an **8-bit microcontroller** with 8-bit registers.  
 - But not all bits are exposed as GPIO headers on Nano/UNO.  
   - `PORTD0` and `PORTD1` are reserved for **UART (RX/TX)**.  
@@ -67,24 +67,24 @@ So with 6 LEDs (D2–D7):
 
 👉 Check out `second.c` for code.  
 
----
 
-## 🔹 Custom Arduino-like Functions  
 
-### `mypinMode()`  
+### 🔹 Custom Arduino-like Functions  
+
+#### `mypinMode()`  
 Recreating Arduino’s `pinMode()` at register level.  
 👉 Implementation in `mypinMode.c`  
 
-### `mydigitalWrite()`  
+#### `mydigitalWrite()`  
 Recreating `digitalWrite()`.  
 👉 Also in `mypinMode.c` (moved to header file).  
 
-### `mydigitalRead()`  
+#### `mydigitalRead()`  
 Steps are similar → just read the bit level of the pin.  
 
----
 
-## 📝 Learnings  
+
+### 📝 Learnings  
 
 - AVR GPIO control revolves around **3 registers**:  
   - **DDRx** → set direction (0 = input, 1 = output)  
