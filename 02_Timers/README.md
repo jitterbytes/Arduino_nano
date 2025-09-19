@@ -48,4 +48,19 @@ directly not creating mydelay() -- I will go through the concepts which i mentio
 > Used for: Simple delays, millis(), micros(), PWM(fast/phase connect)  
 * **TCCR0A (Timer Counter Control Register A)**  
   - Purpose: Set PWM Mode, Toggle OC0A and OC0B pins   
-  - Use Case: Want PWM Pin on D5/D6 or toggle pin on compare  
+  - Use Case: Want PWM Pin on D5/D6 or toggle pin on compare
+* **TCCR0B (Timer Counter Control Register B)**  
+  - Purpose: Select Prescaler and mode bits     
+  - Use Case: To start timer clock    
+* **TCNT0 (Timer Counter Register)**  
+  - Purpose: Counter (0 - 255)     
+  - Use Case: Read/Write when polling based overflow  
+* **OCR0A/OCR0B (Output Compare Register)**  
+  - Purpose: Compare Match Values   
+  - Use Case: In CTC Mode (Clear timer on Match) or PWM
+* **TIMSK0 (Timer Interrupt Mask Register)**  
+  - Purpose: Enable Interrupts (Overflow Compare Match)   
+  - Use Case: When you want timer interrupt instead of polling
+* **TIFR0 (Timer Interrupt Flag Register)**  
+  - Purpose: Flag bits (Check if event happened)     
+  - Use Case: Use polling mode to see if overflow compare occcured      
