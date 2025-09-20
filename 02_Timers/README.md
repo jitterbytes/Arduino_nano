@@ -67,14 +67,14 @@ directly not creating mydelay() -- I will go through the concepts which i mentio
   - Use Case: Use polling mode to see if overflow compare occcured
 
 ## Let's now first do Timer 0 overflow blink 
-Plan 
+**_Plan_**
 1. Timer0 is 8 bit -> it counts 0 to 255.
 2. When it overflows it goes from 255 to 0, overflow flag is set
 3. We will poll this flag -> each overflow = like a know time delay.
 4. Combine overflows until we reach 0.5s or 1s then toggle led
 
-Now what registers we need for this 
-1. TCCR0B - Prescaler selection (see the register mapping in the datasheet)  
+**_Now what registers we need for this_** 
+1. **TCCR0B** - Prescaler selection (see the register mapping in the datasheet)  
    Bit 0 - 2 is what we are interested in CS00 - CS02 [Clock Select]
    | CS02 | CS01 | CS00 | Description          |
    |------|------|------|----------------------|
@@ -86,5 +86,14 @@ Now what registers we need for this
    |  1   |   0  |   1  |   clk/1024           |
    |  1   |   1  |   0  | ext clk src(fall edg)| 
    |  1   |   1  |   1  | ext clk src(rise edg)|
-   
-    
+2. **TCNT0** - Counter (0-255)
+3. **TIFR0** - Bit 0 of this register that is TOV0 is set when an overflow occurs in Timer 0
+
+**_Timming Calculation_**
+* System Clock : 16MHz
+* Prescaler Option: 1,8,64,256,1024.
+Let's pick prescaler = 1024
+   * Timer Clk freq = 16MHz / 1024 = 15625 Hz -> each tick happens in = 64us (1 / 15625)
+   * Overflow = `256 x 64us approx = 16.384ms` [1 overflow happens in 16.384ms]
+   * So to reach `1 sec: 1s / 16.384ms approx 61 overflows`.
+That means after **61 overflows** -> toggle LED
