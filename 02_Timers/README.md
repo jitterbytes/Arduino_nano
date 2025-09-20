@@ -76,14 +76,15 @@ Plan
 Now what registers we need for this 
 1. TCCR0B - Prescaler selection (see the register mapping in the datasheet)  
    Bit 0 - 2 is what we are interested in CS00 - CS02 [Clock Select]
-   | CS02 | CS01 | CS00 |
-   |------|------|------|
-   |  0   |   0  |   0  |
-   |  0   |   0  |   1  |
-   |  0   |   1  |   1  |
-   |  1   |   0  |   0  |
-   |  1   |   0  |   1  |
-   |  1   |   1  |   0  |
-   |  1   |   1  |   1  |
+   | CS02 | CS01 | CS00 | Description          |
+   |------|------|------|----------------------|
+   |  0   |   0  |   0  |   No Clk             |
+   |  0   |   0  |   1  | clk/(w/o prescaling) | 
+   |  0   |   1  |   0  |   clk/8              |
+   |  0   |   1  |   1  |   clk/64             |
+   |  1   |   0  |   0  |   clk/256            |
+   |  1   |   0  |   1  |   clk/1024           |
+   |  1   |   1  |   0  | ext clk src(fall edg)| 
+   |  1   |   1  |   1  | ext clk src(rise edg)|
    
     
