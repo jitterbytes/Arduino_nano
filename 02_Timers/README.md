@@ -97,3 +97,5 @@ Let's pick **prescaler = 1024**
    * Overflow = `256 x 64us approx = 16.384ms` [1 overflow happens in 16.384ms]
    * So to reach `1 sec: 1s / 16.384ms approx 61 overflows`.
 That means after **61 overflows** -> toggle LED
+
+_**Rest in the code.. check out `overflow.c`**_
