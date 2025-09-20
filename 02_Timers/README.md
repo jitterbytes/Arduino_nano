@@ -74,4 +74,16 @@ Plan
 4. Combine overflows until we reach 0.5s or 1s then toggle led
 
 Now what registers we need for this 
+1. TCCR0B - Prescaler selection (see the register mapping in the datasheet)  
+   Bit 0 - 2 is what we are interested in CS00 - CS02 [Clock Select]
+   | CS02 | CS01 | CS00 |
+   |------|------|------|
+   |  0   |   0  |   0  |
+   |  0   |   0  |   1  |
+   |  0   |   1  |   1  |
+   |  1   |   0  |   0  |
+   |  1   |   0  |   1  |
+   |  1   |   1  |   0  |
+   |  1   |   1  |   1  |
+   
     
