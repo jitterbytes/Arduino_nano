@@ -74,7 +74,8 @@ directly not creating mydelay() -- I will go through the concepts which i mentio
 4. Combine overflows until we reach 0.5s or 1s then toggle led
 
 **_Now what registers we need for this_** 
-1. **TCCR0B** - Prescaler selection (see the register mapping in the datasheet)  
+1. **TCCR0A** - Mode Selection Bit 0 - 1 since we want Normal Mode so Bit 0 and Bit 1 (WGM01 , WGM00 -> 0,0)  
+2. **TCCR0B** - Prescaler selection (see the register mapping in the datasheet)  
    Bit 0 - 2 is what we are interested in CS00 - CS02 [Clock Select]
    | CS02 | CS01 | CS00 | Description          |
    |------|------|------|----------------------|
@@ -86,8 +87,8 @@ directly not creating mydelay() -- I will go through the concepts which i mentio
    |  1   |   0  |   1  |   clk/1024           |
    |  1   |   1  |   0  | ext clk src(fall edg)| 
    |  1   |   1  |   1  | ext clk src(rise edg)|
-2. **TCNT0** - Counter (0-255)
-3. **TIFR0** - Bit 0 of this register that is TOV0 is set when an overflow occurs in Timer 0
+3. **TCNT0** - Counter (0-255)
+4. **TIFR0** - Bit 0 of this register that is TOV0 is set when an overflow occurs in Timer 0
 
 **_Timming Calculation_**
 * System Clock : 16MHz
