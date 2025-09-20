@@ -91,8 +91,8 @@ directly not creating mydelay() -- I will go through the concepts which i mentio
 
 **_Timming Calculation_**
 * System Clock : 16MHz
-* Prescaler Option: 1,8,64,256,1024.
-Let's pick prescaler = 1024
+* Prescaler Option: 1,8,64,256,1024.  
+Let's pick **prescaler = 1024**
    * Timer Clk freq = 16MHz / 1024 = 15625 Hz -> each tick happens in = 64us (1 / 15625)
    * Overflow = `256 x 64us approx = 16.384ms` [1 overflow happens in 16.384ms]
    * So to reach `1 sec: 1s / 16.384ms approx 61 overflows`.
