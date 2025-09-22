@@ -113,7 +113,8 @@ _**Rest in the code.. check out `overflow.c`**_
 * We cannot use 15625 directly as max is 255 -> need multiple compare match cycles
 * So total compare counts needed to reach that delay  
 ```math
-\text{Compare match count} = \frac{\text{Total no: of ticks needed}}{(\text{OCR0A} + 1)} \ 
+\text{Compare match count} = \frac{\text{Total no: of ticks needed}}{(\text{OCR0A} + 1)}
+
 * Now here OCR0A is added with 1 coz OCR0A starts from 0.
 
 
