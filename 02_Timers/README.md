@@ -100,7 +100,7 @@ Let's pick **prescaler = 1024**
 That means after **61 overflows** -> toggle LED
 
 _**Rest in the code.. check out `overflow.c`**_
-> Now with Overflow even after calculating based on the Overflow timming i am still not getting the accurate 1 seconds for me its more than 1s. So now lets try do it with Compare Match.
+> Now with Overflow even after calculating based on the Overflow timming i am still not getting the accurate 1 seconds for me its more than 1s around 3-4 seconds. So now lets try do it with Compare Match.
 
 ## Let's now try to do Timer 0 Compare Match
 **_Timming Calculation_**
@@ -145,4 +145,8 @@ _**Rest in the code.. check out `overflow.c`**_
         * Increment compare_match_count var
    * When compare_match_count == 100, toggle the led and reset counter
 
+> Now with this the delay is atleast close enough like i am not getting exact 1 seconds i am getting 1.42 seconds which is better 
+> In the above code we were continously polling that flag bit to check if its set well this continous check **_wastes CPU cycles_**
+
+## So let's try to do Timer 0 Compare Match Interrupt
 
