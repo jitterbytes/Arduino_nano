@@ -116,6 +116,33 @@ _**Rest in the code.. check out `overflow.c`**_
 ```math
 \text{Compare match count} = \frac{\text{Total no: of ticks needed}}{(\text{OCR0A} + 1)}
 ```
-Now here OCR0A is added with 1 coz OCR0A starts from 0.
+* Now here OCR0A is added with 1 coz OCR0A starts from 0.
+* We can choose OCR0A value as 156 then The Compare match count = 15625 / 157 approx 100. -> So we toggle the led every 100 compare matches ~ 1 sec.
+
+**_Registers_**
+* TCCR0A -> CTC mode
+* TCCR0B -> Prescale 1024
+* OCR0A -> 156 (for 1 tick ~64us)
+* TCNT0 -> Counter
+* TIFR0 -> Poll the OCF0A bit 
+
+**_Logic_**
+* OCR0A = 156 → Timer TCNT0 counts: 0, 1, 2, …, 156 → total 157 ticks per cycle (OCR0A + 1).
+* Each time the timer TCNT0 reaches 156, it triggers a compare match, and the counter TCNT0 resets to 0 automatically because you’re in CTC mode.
+* You keep a separate compare match counter in your code.
+* Once this counter reaches 100, you’ve accumulated roughly 1 second of timer time (100 × 157 ticks).
+
+**_Flow of the Program_**
+* **Setup**
+   * TCCR0A -> CTC mode
+   * TCCR0B -> 1024 Prescale
+   * OCR0A -> Intialize 156
+   * TCNT0 -> Initialize 0
+* **Loop**
+   * Poll compare match flag OCF0A in TIFR0
+   * When flag is set
+        * Clear the flag (Write 1 to clear)
+        * Increment compare_match_count var
+   * When compare_match_count == 100, toggle the led and reset counter
 
 
