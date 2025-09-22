@@ -100,3 +100,19 @@ Let's pick **prescaler = 1024**
 That means after **61 overflows** -> toggle LED
 
 _**Rest in the code.. check out `overflow.c`**_
+> Now with Overflow even after calculating based on the Overflow timming i am still not getting the accurate 1 seconds for me its more than 1s. So now lets try do it with Compare Match.
+
+## Let's now try to do Timer 0 Compare Match
+**_Timming Calculation_**
+* System Clock : 16MHz
+* Prescaler = 1024
+* Timer Clk freq = 16MHz / 1024 = 15625 Hz (15625 ticks happen in 1s)
+* Time for 1 tick = 1 / 15625 = 64us
+* No: of ticks for 1s = 1 / 64us = approx 15625
+* Timer 0 is 8 bit max count is 255, in **CTC mode** timer resets when it reaches OCR0A.
+* We cannot use 15625 directly as max is 255 -> need multiple compare match cycles
+* So total compare counts needed to reach that delay
+$$
+\text{Compare match count} = \frac{\text{Ticks per compare match}}{\text{Total ticks needed}} = \frac{\text{Total counts needed}}{(\text{OCR0A} + 1)}
+$$
+
