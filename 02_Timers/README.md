@@ -162,5 +162,17 @@ It should automatically toggle the led when it hits the counter.
    * When compare_match_count == 100, toggle led
    * reset compare_match_count
 * The main loop can be empty as ISR will handle the logic
+> Also have to enable global interrupt Enable bit in the **AVR status Register - SREG** if this is not enabled then the no interrupt enable in the control register will work 
+
+**_Registers_**  
+* Same as the Compare Match
+* TIMSK0 -> Compar Match A interrupt enable bit
+* SREG -> Global Interrupt Enable
+ 
+**_Flow of the Program_**
+* **Setup**
+   * Same as prev
+   * TIMSKO ->
+   * SREG -> 1 << 7 (Set Global Interrupt Enable) 
 
 
