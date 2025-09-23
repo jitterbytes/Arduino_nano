@@ -186,3 +186,6 @@ It should automatically toggle the led when it hits the counter.
 
 _**So Im going to do with Timer 2 Compare Match Interrupt as Timer 2 is 8bit so it will be easy for me**_
 
+Well the led and statements were printing properly visually simultanousley, But still the led was toggling at ~1.61 seconds i checked the Arduino delay function comes around 0.98-1s accurately this is not accurate.  
+Lets list down the situations i am thinking
+* If I stick with 15625 -> Timer clk frequency after 1024 prescaling. since this was not all dividing perfectly 
