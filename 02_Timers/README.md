@@ -150,3 +150,17 @@ _**Rest in the code.. check out `overflow.c`**_
 
 ## So let's try to do Timer 0 Compare Match Interrupt
 
+We will continue from the previous code. What we want to do is No Polling -> Interrupt  
+It should automatically toggle the led when it hits the counter.  
+* Timer 0 Interrupts are handled by -> TIMSK0
+* Set the OCIE0A bit of TIMSK0 -> Enables Interrupt to Compare Match A
+* This allows the timer to automatically trigger an interrupt when TCNT0 == OCR0A
+**But here's the thing since OCR0A is 8bit and our led was toggling on the basis of compare_match_count and the timer will call the interrupt when TCNT0 == OCR0A**
+* Everything goes in _**ISR (Interrupt Service Routine)**_ [**One thing we will have to keep it short, Its bad manners to have long ISR**]
+* Inside ISR
+   * Increment compare_match_count
+   * When compare_match_count == 100, toggle led
+   * reset compare_match_count
+* The main loop can be empty as ISR will handle the logic
+
+
