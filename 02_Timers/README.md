@@ -173,6 +173,13 @@ It should automatically toggle the led when it hits the counter.
 * **Setup**
    * Same as prev
    * TIMSKO ->
-   * SREG -> 1 << 7 (Set Global Interrupt Enable) 
+   * SREG -> 1 << 7 (Set Global Interrupt Enable)
+* **Loop**
+   * Can do other tasks or leave empty
+* **ISR**
+   * increment compare_match_count
+   * if compare_match_count == 100
+      * toggle led
+      * reset compare_match_count 
 
 
