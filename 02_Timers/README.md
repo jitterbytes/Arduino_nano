@@ -180,6 +180,9 @@ It should automatically toggle the led when it hits the counter.
    * increment compare_match_count
    * if compare_match_count == 100
       * toggle led
-      * reset compare_match_count 
+      * reset compare_match_count
 
+> Well the code was working i was getting 1.71s of toggling but the printf statements even though it should have been 1s delay but it was > coming very late -> Then i read that **_Arduino delay() and millis() are dependent on Timer0 only_** i am not satisfied with this
+
+_**So Im going to do with Timer 2 Compare Match Interrupt as Timer 2 is 8bit so it will be easy for me**_
 
