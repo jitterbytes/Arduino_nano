@@ -199,4 +199,10 @@ Wow this worked i am lil unsure why this did not work with Timer 0 and 2 i have 
 * **Interrupt Load**
    * Since Timer 0 is used by Arduino core for millis() delay() and micros(), so i think i was reusing those it was overloading it.
    * Same i feel for Timer 2 might be used for something else also
-> Still if Arduino core is able to get accurate delay with 8 bit Timer, even i should have gotten it. So i will try to do this with true bare metal way where i will skip arduino headers so that they are not blocled or reserved or restrained under the hood. Lets see thats for later first i will get myself comfortable with this register level 
+> Still if Arduino core is able to get accurate delay with 8 bit Timer, even i should have gotten it. So i will try to do this with true bare metal way where i will skip arduino headers so that they are not blocled or reserved or restrained under the hood. Lets see thats for later first i will get myself comfortable with this register level
+
+_**ONE MORE THING I GOT TO KNOW**_
+Like i already know whatever i am doing here this is only for nano and is not at all portable and Arduino ide already understands those MACROS PORTD and DDRD and all so i cannot use my understanding of manually assigning address to those pointers and playing with them. Arduino Headers for avr/io those have Macros for the registers and like if i used those macros then i wont have to assign them address just i can play with those regsiter writing and reading those.But that code will be portable to multiple AVR based boards like UNO, NANO or MEGA etc.
+Lets see when i will use this.  
+
+
