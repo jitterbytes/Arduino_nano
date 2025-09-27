@@ -189,3 +189,5 @@ _**So Im going to do with Timer 2 Compare Match Interrupt as Timer 2 is 8bit so 
 Well the led and statements were printing properly visually simultanousley, But still the led was toggling at ~1.61 seconds i checked the Arduino delay function comes around 0.98-1s accurately this is not accurate.  
 Lets list down the situations i am thinking
 * If I stick with 15625 -> Timer clk frequency after 1024 prescaling. since this was not all dividing perfectly 
+
+## Final try on Timer 1 Compare Match Interrupt - _Lets see if i get accuracy in this_
