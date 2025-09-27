@@ -191,3 +191,12 @@ Lets list down the situations i am thinking
 * If I stick with 15625 -> Timer clk frequency after 1024 prescaling. since this was not all dividing perfectly 
 
 ## Final try on Timer 1 Compare Match Interrupt - _Lets see if i get accuracy in this_
+Wow this worked i am lil unsure why this did not work with Timer 0 and 2 i have few points that can point at this issue.
+* **Timer width (Resolution)**
+   * Timer 0 & 2 -> 8 bit so it can count from 0 to 255 in one go
+   * Timer 1 -> 16 bit so it can count form 0 to 65535 in one go
+   * So with Timer 1 i dont have to do much calculation like compare match counts and it can easily count to approx 65k without the need to frequent interrupts which i think might add some latency aka Interrupt Latency i will call it which was adding ~ 0.64 seconds
+* **Interrupt Load**
+   * Since Timer 0 is used by Arduino core for millis() delay() and micros(), so i think i was reusing those it was overloading it.
+   * Same i feel for Timer 2 might be used for something else also
+> Still if Arduino core is able to get accurate delay with 8 bit Timer, even i should have gotten it. So i will try to do this with true bare metal way where i will skip arduino headers so that they are not blocled or reserved or restrained under the hood. Lets see thats for later first i will get myself comfortable with this register level 
