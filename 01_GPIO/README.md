@@ -45,7 +45,7 @@ Since `DDRD` and `PORTD` are macros in Arduino IDE, I used:
 - `ddrd_ptr` → pointer for DDRD  
 - `portd_ptr` → pointer for PORTD  
 
-👉 Check out `first.c` for the implementation.  
+👉 Check out `blink.ino` for the implementation.  
 
 
 
