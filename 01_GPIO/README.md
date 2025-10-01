@@ -65,7 +65,7 @@ So with 6 LEDs (D2–D7):
 2. Turn ON/OFF all 6 LEDs at once.  
 3. Try different patterns.  
 
-👉 Check out `second.c` for code.  
+👉 Check out `led_patterns.ino` for code.  
 
 
 
