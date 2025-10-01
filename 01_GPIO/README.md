@@ -73,16 +73,15 @@ So with 6 LEDs (D2–D7):
 
 ### `mypinMode()`  
 Recreating Arduino’s `pinMode()` at register level.  
-👉 Implementation in `mypinMode.c`  
+👉 Implementation in `myfunctions.c & myfunctions.h`  
 
 ### `mydigitalWrite()`  
 Recreating `digitalWrite()`.  
-👉 Also in `mypinMode.c` (moved to header file).  
+👉 Implementation in `myfunctions.c & myfunctions.h`   
 
 ### `mydigitalRead()`  
 Steps are similar → just read the bit level of the pin.  
-
-
+👉 Implementation in `myfunctions.c & myfunctions.h`   
 
 ## 📝 Learnings  
 
