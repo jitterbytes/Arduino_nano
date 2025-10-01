@@ -1,4 +1,4 @@
-# 02_Timers
+# 02_Timers _(Still in Works)_
 Now lets get into timers..wow the datasheet was overwhelming i got lost where to look at i want to replicate delay() -> mydelay()
 but for that as much as i know uC uses timers behind the scenes
 
