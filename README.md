@@ -19,6 +19,8 @@ RegisterLevel_Arduino_Nano/
   10_Comparator/
   11_Assembly/
 ```
+I got this checkbox roadmap from AI.  
+
 ## **1_Blink/**
 ✅ *Goals: Learn GPIO registers, bitwise ops, LED patterns*
 
@@ -29,8 +31,6 @@ RegisterLevel_Arduino_Nano/
 - [ ] Implement your own `pinMode()`, `digitalWrite()`, `digitalRead()`  
 
 🔗 **Arduino Core Mapping:** `pinMode()`, `digitalWrite()`, `digitalRead()`
-
----
 
 ## **2_Timers/**
 ✅ *Goals: Replace software delays with hardware timers*
@@ -45,8 +45,6 @@ RegisterLevel_Arduino_Nano/
 
 🔗 **Arduino Core Mapping:** `delay()`, `delayMicroseconds()`, `millis()`, `micros()`, `analogWrite()`
 
----
-
 ## **3_Interrupts/**
 ✅ *Goals: Event-driven programming*
 
@@ -56,8 +54,6 @@ RegisterLevel_Arduino_Nano/
 - [ ] Nested interrupt test (low vs high priority)  
 
 🔗 **Arduino Core Mapping:** `attachInterrupt()`, `detachInterrupt()`
-
----
 
 ## **4_ADC/**
 ✅ *Goals: Read analog inputs*
@@ -69,8 +65,6 @@ RegisterLevel_Arduino_Nano/
 - [ ] Map potentiometer value → PWM brightness  
 
 🔗 **Arduino Core Mapping:** `analogRead()`, `analogReference()`
-
----
 
 ## **5_UART/**
 ✅ *Goals: Build serial communication driver*
@@ -84,8 +78,6 @@ RegisterLevel_Arduino_Nano/
 
 🔗 **Arduino Core Mapping:** `Serial.begin()`, `Serial.print() / Serial.println()`, `Serial.available()`, `Serial.read()`
 
----
-
 ## **6_SPI/**
 ✅ *Goals: Learn synchronous communication*
 
@@ -97,8 +89,6 @@ RegisterLevel_Arduino_Nano/
 
 🔗 **Arduino Core Mapping:** `SPI.begin()`, `SPI.transfer()`
 
----
-
 ## **7_I2C/**
 ✅ *Goals: Master–slave communication via TWI*
 
@@ -109,8 +99,6 @@ RegisterLevel_Arduino_Nano/
 
 🔗 **Arduino Core Mapping:** `Wire.begin()`, `Wire.beginTransmission()`, `Wire.write()`, `Wire.endTransmission()`, `Wire.requestFrom()`
 
----
-
 ## **8_EEPROM/**
 ✅ *Goals: Use internal non-volatile memory*
 
@@ -120,8 +108,6 @@ RegisterLevel_Arduino_Nano/
 - [ ] Simple data logger with EEPROM + UART  
 
 🔗 **Arduino Core Mapping:** `EEPROM.read()`, `EEPROM.write()`, `EEPROM.update()`
-
----
 
 ## **9_WDT_Sleep/**
 ✅ *Goals: Reliability & low-power*
@@ -134,8 +120,6 @@ RegisterLevel_Arduino_Nano/
 
 🔗 **Arduino Core Mapping:** *(Beyond API — not fully exposed in Arduino)*
 
----
-
 ## **10_Comparator/**
 ✅ *Goals: Learn built-in analog comparator*
 
@@ -145,8 +129,6 @@ RegisterLevel_Arduino_Nano/
 
 🔗 **Arduino Core Mapping:** *(Beyond API — not exposed in Arduino)*
 
----
-
 ## **11_Assembly/**
 ✅ *Goals: Get closer to the hardware*
 
@@ -154,3 +136,5 @@ RegisterLevel_Arduino_Nano/
 - [ ] Simple loop in assembly  
 - [ ] Mix C + assembly (critical delay sections)  
 - [ ] Compare C vs ASM instruction cycles  
+
+🔗 **Arduino Core Mapping:** *(Beyond API — pro-level assembly experiments)*
