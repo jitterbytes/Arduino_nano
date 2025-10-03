@@ -4,10 +4,9 @@ This repo is focused on programming the Arduino nano using Registers and not the
 Get all the docs from the Arduino Website [Link](https://docs.arduino.cc/hardware/nano/)
 Also download the Atmega328p Datasheet for Register Level Programming
 
-
 Flow of this repo  
 ```
-Arduino Nano/
+RegisterLevel_Arduino_Nano/
   1_Blink/
   2_Timers/
   3_Interrupts/
