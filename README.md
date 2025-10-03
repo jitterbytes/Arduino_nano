@@ -24,22 +24,22 @@ I got this checkbox roadmap from AI.
 ## **1_Blink/**
 ✅ *Goals: Learn GPIO registers, bitwise ops, LED patterns*
 
-- [ ] Blink LED on PD2 (DDRx, PORTx)  
-- [ ] Blink LED on PB5 (onboard LED)  
-- [ ] Multiple LEDs D2–D7 patterns (chaser, binary counter)  
+- [X] Blink LED on PD2 (DDRx, PORTx)  
+- [X] Blink LED on PB5 (onboard LED)  
+- [X] Multiple LEDs D2–D7 patterns (chaser, binary counter)  
 - [ ] Create macros: `SET_BIT`, `CLEAR_BIT`, `TOGGLE_BIT`  
-- [ ] Implement your own `pinMode()`, `digitalWrite()`, `digitalRead()`  
+- [X] Implement your own `pinMode()`, `digitalWrite()`, `digitalRead()`  
 
 🔗 **Arduino Core Mapping:** `pinMode()`, `digitalWrite()`, `digitalRead()`
 
 ## **2_Timers/**
 ✅ *Goals: Replace software delays with hardware timers*
 
-- [ ] Software delay loop  
-- [ ] Timer0 overflow polling → blink LED  
-- [ ] Timer1 compare match → 1s blink  
+- [X] Software delay loop  
+- [X] Timer0 overflow polling → blink LED  
+- [X] Timer1 compare match → 1s blink  
 - [ ] Implement `delay_ms()` with timers  
-- [ ] Timer interrupt toggles LED (no polling)  
+- [X] Timer interrupt toggles LED (no polling)  
 - [ ] Generate PWM (Fast PWM, Phase Correct PWM)  
 - [ ] Input Capture Unit → measure frequency/duty cycle  
 
