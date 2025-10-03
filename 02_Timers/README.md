@@ -205,7 +205,8 @@ _**ONE MORE THING I GOT TO KNOW**_
 Like i already know whatever i am doing here this is only for nano and is not at all portable and Arduino ide already understands those MACROS PORTD and DDRD and all so i cannot use my understanding of manually assigning address to those pointers and playing with them. Arduino Headers for avr/io those have Macros for the registers and like if i used those macros then i wont have to assign them address just i can play with those regsiter writing and reading those.But that code will be portable to multiple AVR based boards like UNO, NANO or MEGA etc.
 Lets see when i will use this.  
 
-## Making my own delay() -> mydelay_ms() -> Blocking one Just for experimenting
+## Making my own delay() 
+### mydelay_ms() -> Blocking one Just for experimenting
 This function blocks the CPU execution so i can use compare match polling method here.  
 I am using Timer 1 coz it gave me accurate delay i think the Arduino function uses Timer 0 for this function.  
 Configuration of Timer 1
