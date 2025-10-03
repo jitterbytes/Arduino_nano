@@ -18,8 +18,7 @@ RegisterLevel_Arduino_Nano/
   9_WDT_Sleep/
   10_Comparator/
   11_Assembly/
-```
-I got this checkbox roadmap from AI.  
+``` 
 
 ## **1_Blink/**
 ✅ *Goals: Learn GPIO registers, bitwise ops, LED patterns*
